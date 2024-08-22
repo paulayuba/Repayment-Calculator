@@ -7,7 +7,7 @@ const PaymentForm = () => {
   const [interestTerm, setInterestTerm] = useState("");
   const [mortgageRate, setMortgageRate] = useState("");
   const [mortgageType, setMortgageType] = useState("");
-  const [interest, setInterest] =useState =("") 
+  const [interest, setInterest] = useState(""); 
   const [result, setResult] = useState(null);
 
   const calculateRepayments = (e) => {
@@ -41,7 +41,7 @@ const PaymentForm = () => {
   return (
     <div className="flex flex-col md:flex-row items-center py-16 px-4 md:px-8 lg:px-16 justify-center rounded-2xl">
       <form
-        className="w-full border shadow-2xl py-6 px-4 md:w-[40%] lg:w-[30%]  rounded md:mb-0"
+        className="w-full border shadow-2xl py-6 px-4 md:w-[40%] lg:w-[30%] rounded md:mb-0"
         onSubmit={calculateRepayments}
       >
         <div className="flex items-center justify-between mb-6">
@@ -96,21 +96,23 @@ const PaymentForm = () => {
             />
           </div>
         </div>
-        <label className="text-gray-400 px-4 py-4">mortgage Type</label>
-       <input
-        type=""
-        placeholder="Repayment"
-        className="w-full px-4 py-3 border rounded-lg focus:outline-none"
+        <label className="text-gray-400 px-4 py-4">Mortgage Type</label>
+        <input
+          type="text"
+          placeholder="Repayment"
+          value={mortgageType}
+          onChange={(e) => setMortgageType(e.target.value)}
+          className="w-full px-4 py-3 border rounded-lg focus:outline-none"
         />
-       <div className="py-4">
-       <input
-        type=""
-        placeholder="interest only"
-        value={interestonly}
-        onChange={(e) => setInterestOnly(e.target.value)}
-        className="w-full px-4 py-3 border rounded-lg focus:outline-none"
-        />
-       </div>
+        <div className="py-4">
+          <input
+            type="text"
+            placeholder="Interest only"
+            value={interest}
+            onChange={(e) => setInterest(e.target.value)}
+            className="w-full px-4 py-3 border rounded-lg focus:outline-none"
+          />
+        </div>
         <div className="flex justify-center py-7">
           <button className="bg-yellow-300 space-x-2 flex items-center justify-center rounded-3xl font-semibold py-2 px-4">
             <IoCalculator />
