@@ -7,6 +7,7 @@ const PaymentForm = () => {
   const [interestTerm, setInterestTerm] = useState("");
   const [mortgageRate, setMortgageRate] = useState("");
   const [mortgageType, setMortgageType] = useState("");
+  const [interest, setInterest] =useState =("") 
   const [result, setResult] = useState(null);
 
   const calculateRepayments = (e) => {
@@ -96,20 +97,20 @@ const PaymentForm = () => {
           </div>
         </div>
         <label className="text-gray-400 px-4 py-4">mortgage Type</label>
-        <input
-          type="text"
-          placeholder="Repayment"
-          value={mortgageAmount}
-          onChange={(e) => setMortgageAmount(e.target.value)}
-          className="w-full border rounded px-3 py-2 mb-4 focus:outline-none"
+       <input
+        type=""
+        placeholder="Repayment"
+        className="w-full px-4 py-3 border rounded-lg focus:outline-none"
         />
-        <input
-          type="text"
-          placeholder="interest only"
-          value={mortgageAmount}
-          onChange={(e) => setMortgageAmount(e.target.value)}
-          className="w-full border rounded px-3 py-2 mb-4 focus:outline-none"
+       <div className="py-4">
+       <input
+        type=""
+        placeholder="interest only"
+        value={interestonly}
+        onChange={(e) => setInterestOnly(e.target.value)}
+        className="w-full px-4 py-3 border rounded-lg focus:outline-none"
         />
+       </div>
         <div className="flex justify-center py-7">
           <button className="bg-yellow-300 space-x-2 flex items-center justify-center rounded-3xl font-semibold py-2 px-4">
             <IoCalculator />
