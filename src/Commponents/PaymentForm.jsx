@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoCalculator } from "react-icons/io5";
+import { LuPoundSterling } from "react-icons/lu";
 import FirstImage from "./FirstImage.svg";
 
 const PaymentForm = () => {
@@ -67,7 +68,7 @@ const PaymentForm = () => {
         </label>
         <input
           type="text"
-          placeholder="Enter amount"
+          placeholder="" 
           value={mortgageAmount}
           onChange={(e) => setMortgageAmount(e.target.value)}
           className="w-full border rounded px-3 py-2 mb-4 focus:outline-none"
@@ -96,23 +97,35 @@ const PaymentForm = () => {
             />
           </div>
         </div>
-        <label className="text-gray-400 px-4 py-4">Mortgage Type</label>
-        <input
-          type="text"
+        {/* cheackbox */}
+        <label className="block text-gray-700">Mortgage Type</label>
+        <div className="mt-2 flex space-x-4" />
+        <label className="flex items-center px-4 py-2 border border-gray-300 rounded cursor-pointer">
+          <input
+          type="radio"
           placeholder="Repayment"
           value={mortgageType}
           onChange={(e) => setMortgageType(e.target.value)}
-          className="w-full px-4 py-3 border rounded-lg focus:outline-none"
+          className="form-radio h-4 w-4"
         />
-        <div className="py-4">
+        <span className="ml-2 text-gray-700">Mortgage Type</span>
+        </label>
+      
+        <div className="">
+        <label className="block text-gray-700"></label>
+        <div className="mt-2 flex space-x-4" />
+        <label className="flex items-center px-4 py-2 border border-gray-300 rounded cursor-pointer">
           <input
-            type="text"
-            placeholder="Interest only"
-            value={interest}
-            onChange={(e) => setInterest(e.target.value)}
-            className="w-full px-4 py-3 border rounded-lg focus:outline-none"
-          />
+          type="radio"
+          placeholder="Repayment"
+          value={mortgageType}
+          onChange={(e) => setMortgageType(e.target.value)}
+          className="form-radio h-4 w-4"
+        />
+        <span className="ml-2 text-gray-700">Mortgage Type</span>
+        </label>
         </div>
+       
         <div className="flex justify-center py-7">
           <button className="bg-yellow-300 space-x-2 flex items-center justify-center rounded-3xl font-semibold py-2 px-4">
             <IoCalculator />
