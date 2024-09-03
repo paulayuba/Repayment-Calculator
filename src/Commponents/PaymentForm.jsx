@@ -68,7 +68,7 @@ const PaymentForm = () => {
         </label>
         <div className="relative w-full mb-4">
           <span className="absolute inset-y-0 flex items-center">
-            <LuPoundSterling className="bg-blue-200 w-full h-full font-semibold text-xl text-gray-500" />
+            <LuPoundSterling className="bg-blue-200 w-full h-full font-semibold text-sm text-gray-500" />
           </span>
           <input
             type="text"
@@ -92,7 +92,7 @@ const PaymentForm = () => {
             />
             <span className="absolute inset-y-8 mt-4 right-0 flex items-center pr-0">
               <p className="text-gray-400 bg-blue-200 px-2 py-3 w-12 h-12 rounded">
-                year
+                years
               </p>
             </span>
           </div>
